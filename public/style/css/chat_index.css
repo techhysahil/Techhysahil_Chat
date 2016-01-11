@@ -131,8 +131,14 @@ ul {
     font-size: 16px;
     text-align: left;
     line-height: 27px;
-}
 
+}
+.messages li.msg span{
+    color: blueviolet;
+}
+.messages li.msg span.myself{
+    color: green;
+}
 .message.typing .messageBody {
     color: gray;
 }
