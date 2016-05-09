@@ -2,10 +2,6 @@
   "name": "nodeapp",
   "version": "1.0.0",
   "description": "This Repo contains basic setup for node.js app",
-  "main": "HttpServer.js",
-  "scripts": {
-    "start": "node HttpServer.js"
-  },
   "keywords": [
     "Basic",
     "Node",
