@@ -1,4 +1,5 @@
-var socket = io.connect('http://localhost:5500');
+var host = window.location.hostname;
+var socket = io.connect(host);
 
 var currentuser = '';
 

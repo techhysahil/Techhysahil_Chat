@@ -9,12 +9,21 @@ var express = require('express'),
     crypto = require('crypto'),
     app = express();
 
+    app.set('port', (process.env.PORT || 5000));
+
 
     var username = [];
 
     //Socket Coding
-    var http = require('http').Server(express);
-    var io = require('socket.io')(http);
+    //var http = require('http').Server(express);
+    //var io = require('socket.io')(http);
+
+    var express = require('express'),
+        app = express(),
+        server = require('http').createServer(app),
+        io = require('socket.io').listen(server);
+
+    server.listen(process.env.PORT || 3000);
 
     //Make Public as Static Directory
     app.use(express.static('public'));
@@ -68,13 +77,12 @@ var express = require('express'),
 
 });
 
-
-    http.listen(5500, '127.0.0.1', function(){});
-
-    var server = app.listen(5000, function () {
-        var host = server.address().address;
-        var port = server.address().port;
-
-        console.log('Example app listening at http://%s:%s', host, port);
-    });
+    //http.listen(5500, function(){});
+    //
+    //var server = app.listen(app.get('port'), function () {
+    //    var host = server.address().address;
+    //    var port = server.address().port;
+    //
+    //    console.log('Example app listening at http://%s:%s', host, port);
+    //});
 
